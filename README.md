@@ -1,2 +1,1 @@
-# Retail-System
-A simplified version of a online retail system like Amazon.
+cs104 hw4/ project-part1

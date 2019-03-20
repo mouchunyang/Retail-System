@@ -1,0 +1,19 @@
+OR hidden DATA
+
+ADD johnvn 3
+ADD aturing 2
+
+AND troy men
+
+AND DVD HIDDEN
+ADD aturing 1
+ADD john 1
+
+VIEWCART johnvn
+VIEWCART aturing
+VIEWCART adal
+VIEWCART aval
+BUYCART johnvn
+BUYCART aturing
+BUYCART adal
+QUIT database.new
