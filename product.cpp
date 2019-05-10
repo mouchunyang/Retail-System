@@ -63,7 +63,8 @@ double Product::getAverageRating() const{
     for (unsigned int i = 0; i < rating_.size(); i++){
         sum += rating_[i];
     }
-    return (sum/rating_.size());
+    if (rating_.size() == 0) return 0;
+    else return (sum/rating_.size());
 }
 
 

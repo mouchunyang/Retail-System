@@ -8,6 +8,7 @@
 #include <locale>
 #include "db_parser.h"
 #include "util.h"
+#include "hash.h"
 
 
 using namespace std;
@@ -212,6 +213,7 @@ User* UserSectionParser::parseUser(
     string username;
     double balance;
     int type;
+    unsigned long long hashCode;
     is >> username;
     if( is.fail() ) {
         errorMsg = "Unable to read username";
@@ -227,7 +229,13 @@ User* UserSectionParser::parseUser(
         errorMsg = "Unable to read type";
         return NULL;
     }
-    return new User(username, balance, type);
+    is >> hashCode;
+    if( is.fail() ) {
+        errorMsg = "Unable to read password";
+        return NULL;
+    }
+    //unsigned long long hashCode = convertToHashCode(password);
+    return new User(username, balance, type, hashCode);
 }
 
 void UserSectionParser::reportItemsRead(std::ostream& os)
@@ -318,3 +326,4 @@ void ReviewSectionParser::reportItemsRead(std::ostream& os)
 {
     os << "Read " << numRead_ << " reviews" << endl;
 }
+

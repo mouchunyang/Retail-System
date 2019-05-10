@@ -23,10 +23,6 @@ struct Review
     std::string username;
     std::string date;
     std::string reviewText;
-    void dump(std::ostream &os){
-        os << rating << "\n" << username << "\n" << date 
-          << "\n" << reviewText << std::endl;
-    }
 };
 
 #endif

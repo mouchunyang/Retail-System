@@ -1,14 +1,3 @@
-#include <vector>
-#include <iostream>
-//debug
-/*
-void print(std::vector<int> v)
-{
-  for(unsigned int i = 0; i < v.size(); i++) std::cout << v[i] << " ";
-  std::cout << std::endl;
-}
-*/
-
 template <class T, class Comparator>
 void merge(std::vector<T> myArray, std::vector<T> &other, int s1, int e1, 
 	int s2, int e2, Comparator comp){
@@ -63,16 +52,6 @@ void msort(std::vector<T>& myArray, std::vector<T>& other, int start, int end, C
         merge(myArray, other, start, mid, mid, end, comp);
 	}
 }
-
-/*
-template <typename T>
-struct Comp1 { //normal
-  bool operator()(T a, T b)
-  {
-    return (a > b);
-  }
-};
-*/
 
 
 

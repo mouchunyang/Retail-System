@@ -24,11 +24,11 @@ std::string Book::displayString() const{
 	std::string price = std::to_string(price_);
 	price.erase ( price.find_last_not_of('0') + 1, std::string::npos ); 
 	std::string qty = std::to_string(qty_);
-	std::string rating = std::to_string(getAverageRating());
-	rating.erase ( rating.find_last_not_of('0') + 1, std::string::npos);
+	//std::string rating = std::to_string(getAverageRating());
+	//rating.erase ( rating.find_last_not_of('0') + 1, std::string::npos);
 	
 	std::string str = name_ + "\nAuthor: " + author_ + " ISBN: " + isbn_ + 
-	  "\n" + price + ' ' + qty + " left\n" + "Rating: " + rating;
+	  "\n" + price + ' ' + qty + " left.\n";
 	return str;
 }
 

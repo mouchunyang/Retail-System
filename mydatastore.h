@@ -3,7 +3,9 @@
 
 #include "datastore.h"
 #include "util.h"
+#include "heap.h"
 #include "review.h"
+#include "hash.h"
 #include <map>
 
 class MyDataStore : public DataStore{
@@ -45,13 +47,35 @@ public:
                const std::string& date,
                const std::string& review_text);
     
-    bool validUser(std::string username) const;
+    bool validUser(std::string username, std::string password) const;
 
+    std::vector<Review> viewRev(std::string prodName) const;
+    
+    std::vector<std::pair<std::string, double> > makeSuggestion(std::string currentUser);
+
+    double basicSimilarity(std::string username1, std::string username2);
+
+    //return a vector that contains pairs of ratings and usernames
+    std::map<std::string, double> refineSimilarity(std::string username);
 private:
 	std::vector<Product*> productList;
 	std::map<User*, std::vector<Product*> > userList;
     std::map<std::string, std::vector<Review> > reviewList;
+    
 
+    struct comparebyRating{
+        bool operator()(std::pair<std::string, double> p1, std::pair<std::string, double> p2){
+            if (p1.second > p2.second){
+                return true;
+            }
+            else if (p1.second == p2.second){
+                if (p1.first < p2.first){
+                    return true;
+                }
+            }
+            return false;
+        }
+    };
 };
 
 

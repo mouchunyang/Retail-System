@@ -1,0 +1,74 @@
+<products>
+book
+Book1
+1.00
+10
+111-111111111-1
+Author A
+book
+Book2
+1.00
+10
+111-111111111-1
+Author A
+book
+Book3
+1.00
+10
+111-111111111-1
+Author A
+book
+Book4
+1.00
+10
+111-111111111-1
+Author A
+book
+Book5
+1.00
+10
+111-111111111-1
+Author A
+book
+Book6
+1.00
+10
+111-111111111-1
+Author A
+movie
+Movie1
+2.00
+20
+CatA
+Rating-A
+clothing
+Clothing1
+3.00
+30
+SizeA
+BrandA
+</products>
+<users>
+johnvn 50.00 1 53110
+ttrojan 100.00 0 29703
+adal 250.00 1 54151
+aturing 220.00 0 18941
+</users>
+<reviews>
+Book1
+5 johnvn 2019-01-01 Review Text
+Book1
+4 ttrojan 2019-01-01 Review Text
+Book2
+2 ttrojan 2019-01-01 Review Text
+Book2
+4 adal 2019-01-01 Review Text
+Book3
+2 ttrojan 2019-01-01 Review Text
+Book3
+1 adal 2019-01-01 Review Text
+Book4
+3 ttrojan 2019-01-01 Review Text
+Book6
+5 aturing 2019-01-01 Review Text
+</reviews>

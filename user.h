@@ -10,17 +10,19 @@
 class User {
 public:
     User();
-    User(std::string name, double balance, int type);
+    User(std::string name, double balance, int type, unsigned long long hashcode);
     virtual ~User();
 
     double getBalance() const;
     std::string getName() const;
     void deductAmount(double amt);
     virtual void dump(std::ostream& os);
+    unsigned long long getHashcode() const;
 
 private:
     std::string name_;
     double balance_;
     int type_;
+    unsigned long long hashcode_;
 };
 #endif
