@@ -1,11 +1,27 @@
-cs104 hw8
-This project adds a "recommend" command to the amazon system.
-Heap is basically a priority queue.
-The algorithm is basically:
-	Let's say that the logged-in user is A, and we calculate the "rating" of product P to A as follows:
+# Amazon Retail System
 
-	Let S be the set of all other users who have rated P. (We only look at products P that A has not yet rated.)
-	For each user B in S, let r(B,P) be the rating that B gave P, and s(B,A) the similarity between B and A.
-	Let R(P) be the sum of (1-s(B,A))*r(B,P), over all users B in S.
-	Let W be the sum of (1-s(B,A)) over all users B in S.
-	The rating of P for A is now R(P)/W. If W=0, then also R(P)=0, and we define the rating as 0/0 := 0.
+This is an amazon system that supports features such as LOGIN/LOGOUT, AND/OR searches, ADD to cart, ADD/VIEW reviews, etc.
+There is a menu provided with the inputs format given once you run the program. The program prints guidance to the console and updates the database once you quit the program. The sample database is database2.txt.
+
+## Getting Started
+
+Clone the repository to any Linux based laptops. Make sure you don't clone it in existing git repository.
+
+## Running the tests
+
+Run ```make``` and ```./amazon database2.txt```. Perform the tasks you want after LOGIN with the correct password. Instead of storing real passwords, the database only stores the hash code of the passwords.
+The passwords of the existing users are given below
+```
+johnvn	password
+aturing	graphics
+adal	piazza
+mzuckerb abc123	
+ttrojan	fighton
+billg	csci104
+```
+You can add more users with different passwords or change the passwords to whatever you want. Just make sure the hash code in the input database matches the output of function convertToHash in hash.cpp.
+
+## Deployment
+
+This program is a real simple version of a Retail System. But it is well-organized and easily improved by adding more features to it such as MySQL and HTTP which will make it an "Online system". 
+
