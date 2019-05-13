@@ -91,33 +91,21 @@ int main(int argc, char* argv[])
         cerr << "Error parsing!" << endl;
         return 1;
     }
-//I have updated the menu right here to accomodate new feature 
-// which is a reason why all test cases failed
-/*
-    cout << "=====================================" << endl;
-    cout << "  Menu:                                    " << endl;
-    cout << "  LOGIN username                           "<< endl;
-    cout << "  LOGOUT                                   "<< endl;
-    cout << "  AND r/n term term ...                  " << endl;
-    cout << "  OR r/n term term ...                   " << endl;
-    cout << "  ADD search_hit_number     " << endl;
-    cout << "  VIEWCART                  " << endl;
-    cout << "  BUYCART                   " << endl;
-    cout << "  ADDREV search_hit_number rating date review_text" << endl;
-    cout << "  VIEWREV search_hit_number          " << endl;
-    cout << "  QUIT new_db_filename               " << endl;
-    cout << "====================================" << endl;
-*/
-//The revised menu
-    cout << "=====================================\n";
-    cout << "Menu: \n";
-    cout << "  AND term term ...                  \n";
-    cout << "  OR term term ...                   \n";
-    cout << "  ADD username search_hit_number     \n";
-    cout << "  VIEWCART username                  \n";
-    cout << "  BUYCART username                   \n";
-    cout << "  QUIT new_db_filename               \n";
-    cout << "====================================\n";
+
+    cout << "============================================" << endl;
+    cout << "Menu: " << endl;
+    cout << "  LOGIN username password                   " << endl;
+    cout << "  LOGOUT                                    " << endl;
+    cout << "  AND r/n term term ...                     " << endl;
+    cout << "  OR r/n term term ...                      " << endl;
+    cout << "  ADD search_hit_number                     " << endl;
+    cout << "  VIEWCART                                  " << endl;
+    cout << "  BUYCART                                   " << endl;
+    cout << "  ADDREV search_hit_number rating YYYY-MM-DD review_text" << endl;
+    cout << "  VIEWREV search_hit_number                 " << endl;
+    cout << "  REC                                       " << endl;
+    cout << "  QUIT new_db_filename                      " << endl;
+    cout << "============================================" << endl;
 
     vector<Product*> hits;
     bool done = false;
